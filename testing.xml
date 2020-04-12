@@ -1,0 +1,28 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="example suite 1" parallel="tests">
+<listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2" />
+
+</listeners>
+ <test name="MutiBrowser Testing firefox" >
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.htc.seleniumtestNG.MultiBrowserTest"/>
+     </classes>
+ </test>
+
+ <test name="MutiBrowser Testing chrome" >
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.htc.seleniumtestNG.MultiBrowserTest"/>
+     </classes>
+ </test>
+ 
+ <test name="MutiBrowser Testing HTMLUNITRUNNER HEADLESS" >
+  <parameter name="browser" value="html"/>
+    <classes>
+      <class name="com.htc.seleniumtestNG.MultiBrowserTest"/>
+     </classes>
+ </test>
+ </suite>
